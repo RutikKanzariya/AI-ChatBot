@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 from chatbot import get_response
 
-app=FastAPI()
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,20 +15,23 @@ app.add_middleware(
 )
 
 
-class ChatRequest(BaseModel):
+@app.get("/")
+def home():
+    return {
+        "status": "success",
+        "message": "AI ChatBot Backend is Running 🚀"
+    }
 
-    message:str
-    mode:str
+
+class ChatRequest(BaseModel):
+    message: str
+    mode: str
 
 
 @app.post("/chat")
-
-def chat(data:ChatRequest):
-
-    response=get_response(data.message,data.mode)
+def chat(data: ChatRequest):
+    response = get_response(data.message, data.mode)
 
     return {
-
-        "response":response
-
+        "response": response
     }
