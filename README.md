@@ -249,11 +249,10 @@ Through this project, I learned:
 **Rutik Kanzariya**
 
 GitHub:
-https://github.com/YourUsername
+https://github.com/RutikKanzariya
 
 LinkedIn:
-https://linkedin.com/in/YourProfile
-
+https://www.linkedin.com/in/rutik-kanzariya-81a7a82bb/
 ---
 
 ## ⭐ Support
