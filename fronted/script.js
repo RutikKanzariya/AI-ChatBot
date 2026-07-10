@@ -6,6 +6,8 @@ const modeSelect = document.getElementById("mode");
 
 
 // Add Message
+const API_URL = "https://ai-chatbot-wnpk.onrender.com/chat";
+
 function addMessage(message, sender) {
 
     const messageDiv = document.createElement("div");
@@ -65,26 +67,16 @@ async function sendMessage() {
 
         // Change this URL later after creating FastAPI
 
-        const response = await fetch("http://127.0.0.1:8000/chat", {
-
-            method: "POST",
-
-            headers: {
-
-                "Content-Type": "application/json"
-
-            },
-
-            body: JSON.stringify({
-
-                message: message,
-
-                mode: modeSelect.value
-
-            })
-
-        });
-
+        const response = await fetch(API_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        message: message,
+        mode: modeSelect.value
+    })
+});
 
         const data = await response.json();
 
