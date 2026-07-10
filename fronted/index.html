@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ChatBot</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+                <h2>AI ChatBot</h2>
+                <span class="status">
+                    <i class="fa-solid fa-circle"></i>
+                    Online
+                </span>
+            </div>
+
+        </div>
+
+        <div class="mode-container">
+
+            <label for="mode">AI Mode</label>
+
+            <select id="mode">
+
+                <option value="angry">😡 Angry</option>
+                <option value="sad">😢 Sad</option>
+                <option value="funny" selected>😂 Funny</option>
+
+            </select>
+
+        </div>
+
+    </header>
+
+    <!-- ================= CHAT AREA ================= -->
+
+    <main class="chat-container" id="chat-container">
+
+        <!-- Welcome Message -->
+
+        <div class="message bot">
+
+            <div class="avatar">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <div class="text">
+                <p>Hello 👋</p>
+                <p>I'm your AI Assistant.</p>
+                <p>How can I help you today?</p>
+            </div>
+
+        </div>
+
+        <!-- User Message Example -->
+
+        <!--
+
+        <div class="message user">
+
+            <div class="text">
+
+                Hello AI
+
+            </div>
+
+            <div class="avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+        </div>
+
+        -->
+
+    </main>
+
+    <!-- ================= TYPING INDICATOR ================= -->
+
+    <div class="typing" id="typing">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- ================= INPUT ================= -->
+
+    <footer class="input-container">
+
+        <button id="mic-btn" title="Speech to Text">
+
+            <i class="fa-solid fa-microphone"></i>
+
+        </button>
+
+        <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message..."
+            autocomplete="off"
+        >
+
+        <button id="send-btn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </footer>
+
+    <!-- ================= JS ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
